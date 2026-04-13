@@ -1,0 +1,25 @@
+server:
+  port: ${API_PORT:3099}
+  address: ${SERVER_ADDRESS:127.0.0.1}
+
+spring:
+  application:
+    name: underconstruction-api
+  jpa:
+    open-in-view: false
+    hibernate:
+      ddl-auto: none
+    show-sql: false
+  datasource:
+    url: jdbc:mariadb://${DB_HOST:localhost}:${DB_PORT:3306}/${DB_NAME:underconstruction}
+    username: ${DB_USER:underconstruction}
+    password: ${DB_PASSWORD:}
+    driver-class-name: org.mariadb.jdbc.Driver
+
+jwt:
+  secret: ${JWT_SECRET:dev-only-change-me-use-long-random-string-in-production-min-256-bits}
+  expiration-ms: ${JWT_EXPIRATION_MS:86400000}
+
+logging:
+  level:
+    org.springframework.security: INFO

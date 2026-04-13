@@ -1,0 +1,10 @@
+.env
+.env.local
+.env.*.local
+node_modules
+dist
+backend-spring/target
+.idea
+*.iml
+.DS_Store
+*.log
